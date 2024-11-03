@@ -153,10 +153,12 @@ img {
   border: 2px solid black;
   cursor: pointer;
   transition: all 0.2s;
+  font-weight: bold;
 }
 
 .hero .btn:hover {
-  opacity: 0.9;
+  transition: 0.3s;
+  background-color: var(--primary-color);
   cursor: pointer;
 }
 
@@ -335,12 +337,14 @@ img {
   margin-top: 10px;
   padding: 10px;
   border: 2px solid black;
+  transition: all 0.2s;
+  font-weight: bold;
 }
 
 .stats .btn:hover {
-  color: var(--primary-color);
+  background-color: var(--primary-color);
   cursor: pointer;
-  font-weight: bold;
+  transition: 0.3s;
 }
 
 /* Section Pricing */
@@ -379,6 +383,7 @@ img {
   display: inline-block;
   border: 2px solid black;
   cursor: pointer;
+  font-weight: bold;
   transition: all 0.2s;
 }
 
@@ -484,5 +489,9 @@ img {
   .footer-flex {
     flex-direction: column;
     text-align: center;
+  }
+
+  .stats-content .btn {
+    margin-bottom: 2rem;
   }
 }
