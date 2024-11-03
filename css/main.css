@@ -386,7 +386,7 @@ img {
 .chapter-cards .card .btn:hover {
   opacity: 0.9;
   cursor: pointer;
-  background-color: #3498db;
+  background-color: var(--primary-color);
   color: #fff;
   transition: 0.3s;
 }
