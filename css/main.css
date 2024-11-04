@@ -407,6 +407,18 @@ img {
   transition: 0.3s;
 }
 
+.prices .card h3 {
+  background-color: #333;
+  width: 121%;
+  color: white;
+  transition: all 0.2s;
+}
+
+.prices .card h3:hover {
+  color: var(--primary-color);
+  transition: 0.3s;
+}
+
 /* Footer */
 
 .footer-flex {
@@ -542,6 +554,11 @@ img {
   .nav-bar {
     margin-bottom: 1rem;
   }
+
+  .hero-image {
+    object-position: 0;
+  }
+
   .topics {
     grid-template-columns: 1fr;
   }
@@ -574,7 +591,10 @@ img {
     margin-bottom: 2rem;
   }
 
-  .hero-image {
-    object-position: 0;
+  .prices .card h3 {
+    background-color: #333;
+    width: 100%;
+    color: white;
+    transition: all 0.2s;
   }
 }
