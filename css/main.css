@@ -408,14 +408,15 @@ img {
 }
 
 .prices .card h3 {
-  background-color: #333;
+  background-color: var(--secondary-color);
   width: 121%;
-  color: white;
+  color: #fff;
   transition: all 0.2s;
+  border: 2px solid black;
 }
 
 .prices .card h3:hover {
-  color: var(--primary-color);
+  background-color: var(--primary-color);
   transition: 0.3s;
 }
 
