@@ -455,6 +455,74 @@ img {
   margin: 0 auto;
 }
 
+.review-section {
+  margin: 0 auto;
+  margin-top: 2rem;
+  margin-bottom: -2rem;
+  padding: 0 1.5rem;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading for the review section */
+.review-section h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+/* Styling for each individual review card */
+.review-card {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Flex container for the user's name and rating */
+.review-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+/* User's name styling */
+.review-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Star rating styling */
+.review-rating {
+  color: #f5b50a;
+  font-size: 1.2rem;
+}
+
+/* Review text styling */
+.review-text {
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Centering images within the review cards */
+.review-card img {
+  display: block;
+  margin: 0 auto;
+}
+/* Scaling Image */
+.review-card {
+  transition: transform 0.3s;
+}
+
+.review-card:hover {
+  transform: scale(1.05);
+}
+
 @media (max-width: 576px) {
   .header-flex {
     flex-direction: column;
