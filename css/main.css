@@ -123,10 +123,11 @@ img {
   border-top: 5px black solid;
   border-bottom: 5px black solid;
   background-image: url(/img/heroimage.jpg);
-  background-size: cover;
+  background-size: cover; /* Ensures the image covers the entire container */
   background-repeat: no-repeat;
-  background-position: 0 -150px;
+  background-position: center; /* Centers the image */
   background-attachment: fixed;
+  width: 100%;
 }
 
 .hero {
