@@ -412,7 +412,8 @@ img {
   width: 121%;
   color: #fff;
   transition: all 0.2s;
-  border: 2px solid black;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
 }
 
 .prices .card h3:hover {
