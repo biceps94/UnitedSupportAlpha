@@ -117,6 +117,17 @@ img {
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.3);
 }
 
+/* Adding underline to the card and background as well */
+.card li {
+  /* font-weight: bold; */
+  line-height: 2;
+  background: #f4f4f4;
+  background-size: cover;
+  width: 120%;
+  border-bottom: 1px dotted #333;
+  color: #333;
+}
+
 /* Section: Hero Image */
 
 .hero-section {
@@ -371,6 +382,10 @@ img {
   width: 100%;
 }
 
+.card img {
+  margin-bottom: 0.5rem;
+}
+
 .card_mega img {
   height: 150px;
 }
@@ -598,5 +613,14 @@ img {
     width: 100%;
     color: white;
     transition: all 0.2s;
+  }
+
+  .card li {
+    /* font-weight: bold; */
+    line-height: 2;
+    background: #f4f4f4;
+    background-size: cover;
+    width: 100%;
+    border-bottom: 1px dotted #333;
   }
 }
