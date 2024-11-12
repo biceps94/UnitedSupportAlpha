@@ -653,6 +653,7 @@ img {
   .chapter-cards_pricing_x2 {
     grid-template-columns: 1fr;
   }
+
   .hero-section {
     background-position: -600px -50px;
   }
