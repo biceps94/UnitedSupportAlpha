@@ -304,8 +304,8 @@ img {
 }
 
 .info-left {
-  background: url(/img/AI_Image/Img_05.png) top center/cover no-repeat;
-  background-position: fixed;
+  background: url(/img/AI_Image/Img_05.png) no-repeat center/cover;
+  width: 50%;
 }
 
 .info-content {
@@ -314,10 +314,6 @@ img {
   color: black;
   flex: 1;
   padding: 4rem;
-}
-
-.info-left {
-  width: 50%;
 }
 
 .info-content h2 {
