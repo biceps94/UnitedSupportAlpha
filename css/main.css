@@ -691,3 +691,140 @@ img {
     border-bottom: 1px dotted #333;
   }
 }
+
+/* Testing CSS */
+.btn {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.hero h2::after {
+  content: '|';
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.floating-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--secondary-color);
+  color: white;
+  padding: 1rem;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  font-size: 1.5rem;
+  transition: background 0.3s ease;
+}
+.floating-btn:hover {
+  background: var(--primary-color);
+}
+header.header {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1000;
+  border-bottom: 1px solid #ccc;
+}
+.pricing-calculator {
+  background: #f9f9f9;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 4rem auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.pricing-calculator h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.pricing-calculator label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+.pricing-calculator input {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+.pricing-output {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+.review-marquee {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.review-track {
+  display: flex;
+  gap: 2rem;
+  animation: scroll-left 30s linear infinite;
+  width: max-content;
+}
+
+.review-card {
+  min-width: 300px;
+  flex-shrink: 0;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* container that hides overflow */
+.review-marquee {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  margin: 2rem 0;
+}
+
+/* flex row that we’ll translate with JS */
+.review-track {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 2rem; /* keeps space between cards */
+  will-change: transform;
+}
+
+/* --- image size (your last request) --- */
+.review-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-top: 1rem;
+}
