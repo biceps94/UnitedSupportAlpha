@@ -828,3 +828,8 @@ header.header {
   object-fit: cover;
   margin-top: 1rem;
 }
+
+.orange {
+  color: var(--primary-color);
+  font-weight: bold;
+}

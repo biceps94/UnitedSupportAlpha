@@ -70,7 +70,7 @@
         <div class="topics">
           <div class="topic">
             <div class="topic-image">
-              <img src="/img/AI_Image/Img_22.png" alt="topic" />
+              <img src="/img/AI_Image/img1_ScaleYourBusiness.png" alt="topic" />
             </div>
             <div class="topic-text">
               <h3>Set Clear Objectives and Goals</h3>
@@ -78,7 +78,7 @@
           </div>
           <div class="topic">
             <div class="topic-image">
-              <img src="/img/AI_Image/Img_21.png" alt="alternative" />
+              <img src="/img/AI_Image/img2_CustomerSupportService.png" alt="alternative" />
             </div>
             <div class="topic-text">
               <h3>Retain your e-commerce customers</h3>
@@ -86,7 +86,7 @@
           </div>
           <div class="topic">
             <div class="topic-image">
-              <img src="/img/AI_Image/Img_13.png" alt="alternative" />
+              <img src="/img/AI_Image/img3_StrongCallToAction.png" alt="alternative" />
             </div>
             <div class="topic-text">
               <h3>Establish Strong Call-to-Actions</h3>
@@ -405,6 +405,7 @@
         <p>&copy; 2025 - 2026 United Support. All rights reserved</p>
       </div>
     </footer>
+    
 
     <script
     src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
@@ -420,22 +421,43 @@
     referrerpolicy="no-referrer"
   ></script>
 
+
+  <!-- Script: Typing Text -->
   <script>
-    const text = "Professional E-Commerce Customer Service";
-    const typingElement = document.getElementById("typing-text");
-    let index = 0;
+    const fullText = [
+      { char: "P" }, { char: "r" }, { char: "o" }, { char: "f" }, { char: "e" }, { char: "s" }, { char: "s" },
+      { char: "i" }, { char: "o" }, { char: "n" }, { char: "a" }, { char: "l" }, { char: " " },
   
-    function typeText() {
-      if (index < text.length) {
-        typingElement.textContent += text.charAt(index);
-        index++;
-        setTimeout(typeText, 70); // speed of typing (ms per character)
+      // orange "E-Commerce"
+      { char: "<span class='orange'>" },
+      { char: "E" }, { char: "-" }, { char: "C" }, { char: "o" }, { char: "m" },
+      { char: "m" }, { char: "e" }, { char: "r" }, { char: "c" }, { char: "e" },
+      { char: "</span>" },
+  
+      { char: " " },
+      { char: "C" }, { char: "u" }, { char: "s" }, { char: "t" }, { char: "o" }, { char: "m" },
+      { char: "e" }, { char: "r" }, { char: " " },
+      { char: "S" }, { char: "e" }, { char: "r" }, { char: "v" }, { char: "i" }, { char: "c" }, { char: "e" }
+    ];
+  
+    const typingElement = document.getElementById("typing-text");
+    let i = 0;
+    let buffer = "";
+  
+    function type() {
+      if (i < fullText.length) {
+        buffer += fullText[i].char;
+        typingElement.innerHTML = buffer;
+        i++;
+        setTimeout(type, 50);
       }
     }
   
-    document.addEventListener("DOMContentLoaded", typeText);
+    document.addEventListener("DOMContentLoaded", type);
   </script>
 
+
+<!-- Script: Work Counter -->
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const counters = document.querySelectorAll(".counter");
