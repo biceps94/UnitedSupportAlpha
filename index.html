@@ -461,23 +461,21 @@
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const counters = document.querySelectorAll(".counter");
-    let started = false;
-  
+
     function formatNumber(num) {
       return num.toLocaleString();
     }
-  
+
     function animateToTarget(counter, target, duration = 2000, onFinish) {
-      const start = 0;
       const startTime = performance.now();
-  
+
       function update(now) {
         const elapsed = now - startTime;
         const progress = Math.min(elapsed / duration, 1);
         const current = Math.floor(progress * target);
-  
+
         counter.innerText = formatNumber(current);
-  
+
         if (progress < 1) {
           requestAnimationFrame(update);
         } else {
@@ -485,47 +483,50 @@
           if (onFinish) onFinish(target);
         }
       }
-  
+
       requestAnimationFrame(update);
     }
-  
-    function startInfiniteCounter(counter, current, speed) {
+
+    function startInfiniteCounter(counter, current, initialSpeed) {
+      let speed = initialSpeed;
+
       function update() {
         current += 1;
         counter.innerText = formatNumber(current);
+
+        // Gradually slow down, max 1000ms delay
+        speed = Math.min(speed + 10, 1000);
         setTimeout(update, speed);
       }
+
       update();
     }
-  
+
     function startCounterSequence(counter) {
       const target = parseInt(counter.getAttribute("data-target"), 10);
       const speed = parseInt(counter.getAttribute("data-speed"), 10) || 20;
-  
+
       animateToTarget(counter, target, 2000, (finalValue) => {
         startInfiniteCounter(counter, finalValue, speed);
       });
     }
-  
-    const observer = new IntersectionObserver(
-      (entries, obs) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting && !started) {
-            counters.forEach(startCounterSequence);
-            started = true;
-            obs.disconnect();
-          }
-        });
-      },
-      { threshold: 0.4 }
-    );
-  
-    const statsSection = document.querySelector(".stats");
-    if (statsSection) {
-      observer.observe(statsSection);
-    }
+
+    // Intersection Observer to trigger only on scroll into view
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const counter = entry.target;
+          startCounterSequence(counter);
+          observer.unobserve(counter); // run only once
+        }
+      });
+    }, {
+      threshold: 0.6 // trigger when 60% of the element is visible
+    });
+
+    counters.forEach(counter => observer.observe(counter));
   });
-  </script>
+</script>
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
