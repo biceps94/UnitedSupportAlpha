@@ -468,6 +468,7 @@ img {
 .prices .card h3 {
   background-color: var(--secondary-color);
   width: 121%;
+  height: 30px;
   color: #fff;
   transition: all 0.2s;
   border-top: 2px solid black;
